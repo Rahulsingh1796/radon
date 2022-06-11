@@ -4,11 +4,13 @@ const router = express.Router();
 const UserController= require("../controllers/userController")
 const BookController= require("../controllers/bookController")
 const commonMW = require ("../middlewares/commonMiddlewares")
+const MyController = require ("../controllers/myController")
 
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
-
+router.get('/hello',MyController.getRes)
+router.get('/testme', MyController.getRes)
 
 
 
